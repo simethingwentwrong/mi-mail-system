@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=server1\ user1
+comment0.target=MailClient(MailServer,\ java.lang.String)
+comment0.text=\r\n\ constructor\ que\ inicialice\ metiendo\ valores\r\n
+comment1.params=
+comment1.target=MailItem\ getNextMailItem()
+comment1.text=\r\n\ devolver\ el\ siguiente\ correo\r\n
+comment2.params=
+comment2.target=void\ printNextMailItem()
+comment2.text=\r\n\ \r\n
+numComments=3

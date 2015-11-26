@@ -7,27 +7,40 @@
  */
 public class MailClient
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // representacion del seridor asociado a ese cliente
+    private MailServer server;
+    //representa la direccion de corre del usuario que es cliente
+    private String user;
 
     /**
-     * Constructor for objects of class MailClient
+     * constructor que inicialice metiendo valores
      */
-    public MailClient()
+    public MailClient(MailServer server1, String user1)
     {
-        // initialise instance variables
-        x = 0;
+        server = server1;
+        user = user1;
+        
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * devolver el siguiente correo
      */
-    public int sampleMethod(int y)
+    public MailItem getNextMailItem()   
     {
-        // put your code here
-        return x + y;
+        return server.getNextMailItem (user);
+    }
+    
+    /**
+     * 
+     */
+    public void printNextMailItem()
+    {
+        MailItem item = server.getNextMailItem(user);
+        if(item == null) {
+            System.out.println("No new mail.");
+        }
+        else {
+            item.print();
+        }
     }
 }
