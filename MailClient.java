@@ -43,4 +43,14 @@ public class MailClient
             item.print();
         }
     }
+    
+    /**
+     * enviar e-mail
+     */
+    public void sendMailItem(String to, String subjet, String message)
+    {
+        MailItem item = new MailItem(user, to, subjet, message);
+        server.post(item);
+    }
 }
+
